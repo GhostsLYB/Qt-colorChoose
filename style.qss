@@ -1,3 +1,22 @@
 ﻿QMainWindow{
     background-color:darkgray;
 }
+
+QMainWindow>QPushButton{
+    border: 1px solid darkgray;
+    border-radius:4px;
+}
+QMainWindow>QPushButton:hover{
+    border-left-width:2px;
+    border-bottom-width:2px;
+}
+QLineEdit{
+    border-radius:2px;
+    background-color:#E8F0EE;
+    selection-background-color:#F0EFEA
+    /*font-color:#B38FF0; */
+    /*font-color:#28F0F0; */
+}
+QLineEdit:hover{
+    border:2px;
+}

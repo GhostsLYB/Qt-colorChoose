@@ -9,6 +9,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     this->setFixedSize(200,200);
     this->setWindowTitle("ColorChoose");
+    ui->btnColor->setParent(this);
     color = ui->btnColor->palette().color(QPalette::Background);
     alterColor();
     connect(ui->btnColor,&QPushButton::clicked,this,&MainWindow::on_colorChangegd);
