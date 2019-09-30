@@ -55,32 +55,6 @@ void MainWindow::on_rgbChanged(QString str)
 
 void MainWindow::on_hexChanged(QString str)
 {
-    if(str.isEmpty())
-        return;
-    if(str.count() != 7)
-        return;
-    if(str.at(0) != '#')
-        return;
-    bool isHex = false;
-    for(int i = 1; i < str.count(); i++)
-    {
-        QChar ch = str.at(1); //判断字符ch是否16进制字符，是返回1，否返回0
-        if ( ch >='0' && ch <='9' ) {isHex = true;break;}
-        if ( ch >='A' && ch <='F' ) {isHex = true;break;}
-        if ( ch >='a' && ch <='f' ) {isHex = true;break;}
-        else {isHex = false;break;}
-    }
-    if(!isHex)
-        return;
-    QString sr = str.mid(1,2);
-    if(sr.isEmpty())
-        return;
-    QString sg = str.mid(3,2);
-    if(sg.isEmpty())
-        return;
-    QString sb = str.mid(5,2);
-    if(sb.isEmpty())
-        return;
     QColor newColor = QColor(str);
     if(newColor.isValid())
         color = newColor;
